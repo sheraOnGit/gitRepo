@@ -1,0 +1,72 @@
+Q.Diff btwn init and clone cmd
+Q.Diff btwn fetch and pull
+
+GIT operations and commands
+
+Creating Repositories:
+git init
+git clone
+
+Create link with central repository:
+git remote add origin "<remote link>"
+
+Git Pull i.e fetch all file from remote repo
+git pull origin master
+--master is branch name
+
+git status
+tell which files are added to index and are ready to commit.
+
+add files to your index
+git add
+
+to add all files to index
+git add -A
+
+Commit changes.
+git commit -m "<message for commit>"
+
+to commit modified file which are already in index / but not work for commit of those while file which are not in index
+git commit -a -m "all file commited"
+
+
+command on branches
+types of branches:
+Local Branches
+Remote tracking branches
+
+to create new branch
+git branch "branchname" 
+
+to switch to another branch
+git checkout branchname
+
+merge to master branch
+first switch to master branch
+git merge <brachName>
+ 
+if we make change and commit file in a branch it's modification is not seen in another branch until unless we merge that branch to another branche.
+
+When we create branch on any parent branch , then child branch copy all the (commited)file in parent branch at that intstant.
+But after creating child branch on parent branch , if any modification done in parent branch it is not reflected in child branch.We have to merge parent branch to child branch then.
+
+Rebaising 
+checkout to branch in which we have to merge
+git rebase <name of branch name to merge>
+
+ssh
+ssh-keygen
+then
+copy the key
+go to github account->setting ->ssh and gpg keys->new ssh key and paste the key
+
+ssh -T git@github.com
+
+Cmd to Push changes to server reprository
+git push origin <branch name>
+
+How to go back to previous version
+command
+git log
+copy the first 8 bit commithash
+git checkout <commithash> <name of the file>
